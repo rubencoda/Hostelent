@@ -1,0 +1,71 @@
+.choosebanner {
+  background-image: url(".././assets/img/banner-chooselogin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+
+  .row {
+    margin-top: 100px;
+  }
+
+  .pengusaha {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ffff;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, bold);
+      color: #373737;
+
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .pengusaha:hover {
+    transform: scale(1.1);
+  }
+
+  .footerchoose {
+    margin-top: 80px;
+    p {
+      font-family: "Poppins", sans-serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #ffff;
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 992px) {
+  .choosebanner {
+    .row {
+      margin-top: 20px;
+    }
+    .pengusaha {
+      margin-top: 200px;
+      a {
+        img {
+          margin-left: auto;
+          margin-right: auto;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+    .footerchoose {
+      margin-top: 130px;
+    }
+  }
+}

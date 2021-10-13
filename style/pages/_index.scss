@@ -1,0 +1,331 @@
+.navbar-brand {
+  font-family: "Krona One", sans-serif;
+  font-weight: map-get($font-weight, regular);
+  font-size: 40px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    padding-left: 25px;
+
+    .btn-warning {
+      background-color: #2b7b8c;
+      border: none;
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, semibold);
+      font-size: 15px;
+      border-radius: 30px;
+      color: #ffff;
+    }
+  }
+
+  a:hover {
+    color: #f2b90c !important;
+  }
+
+  .active {
+    color: #f2b90c !important;
+  }
+
+  img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.banner {
+  background-image: url(".././assets/img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: auto;
+
+  h1 {
+    margin-top: 180px;
+    font-family: "Krona One", sans-serif;
+    font-weight: map-get($font-weight, regular);
+    font-size: 40px;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, thin);
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  .btn-warning {
+    margin-bottom: 230px;
+    background-color: #f2b90c;
+    border: none;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: map-get($font-weight, semibold) !important;
+    font-size: 15px;
+    border-radius: 30px;
+  }
+}
+
+.wrapper {
+  background-color: #2b7b8c;
+}
+
+.doing {
+  margin: 70px 0 50px 0;
+
+  img {
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+  }
+
+  h3 {
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 30px;
+    color: #ffff;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, thin);
+    font-size: 15px;
+    color: #ffff;
+  }
+
+  .btn-warning {
+    background-color: #f2b90c;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, semibold);
+    font-size: 15px;
+    border-radius: 30px;
+    color: #ffff;
+  }
+}
+
+.blognews {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  overflow: hidden;
+
+  .blog-slider {
+    .card {
+      margin: 30px 15px 0 15px;
+      width: auto;
+      background-color: #2b7b8c !important;
+      border: none;
+
+      img {
+        border-radius: 15px;
+      }
+
+      .btn-primary {
+        background-color: #2b7b8c;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, thin);
+        font-size: 15px;
+      }
+
+      h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, bold);
+        font-size: 20px;
+        color: #ffff;
+      }
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, thin);
+        font-size: 13px;
+        color: #ffff;
+      }
+    }
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 40px;
+    color: #ffff;
+  }
+
+  .news-slider {
+    .card {
+      margin: 50px 15px 0 15px;
+      background-color: #2b7b8c;
+      border: none;
+
+      .btn-warning {
+        background-color: #f2b90c;
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, semibold);
+        font-size: 15px;
+        color: #ffff;
+      }
+
+      h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, bold);
+        font-size: 20px;
+        color: #ffff;
+      }
+
+      h6 {
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+        font-size: 14px;
+        color: #ffff !important;
+      }
+
+      p {
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: map-get($font-weight, thin);
+        font-size: 13px;
+        color: #ffff;
+      }
+    }
+  }
+}
+
+.testimonial {
+  margin-bottom: 80px;
+  h1 {
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 40px;
+    color: #373737;
+  }
+  .testi-card {
+    padding: 10px;
+    margin: 50px 15px 5px 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    img {
+      margin-top: 30px;
+      width: 60px;
+      height: 60px;
+    }
+
+    h3 {
+      margin-top: 8px;
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, bold);
+      font-size: 20px;
+      color: #373737;
+    }
+
+    .jabatan {
+      margin-top: -6px;
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, thin);
+      font-size: 14px;
+    }
+
+    .pesan {
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, thin);
+      font-size: 13px;
+    }
+  }
+}
+
+.team {
+  h1 {
+    margin: 50px 0px 30px 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 40px;
+  }
+
+  img {
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+  }
+
+  h5 {
+    margin-top: 9px;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, thin);
+    font-size: 15px;
+  }
+}
+
+.footer {
+  background-color: #373737;
+  h1 {
+    margin: 50px 0 30px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 40px;
+    color: #ffff;
+  }
+
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: 20px;
+    color: #ffff;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, thin);
+    font-size: 15px;
+    color: #ffff;
+  }
+}
+
+// Desktop
+@media (min-width: 992px) {
+  .banner {
+    h1 {
+      margin-top: 190px;
+      font-family: "Krona One", sans-serif;
+      font-weight: map-get($font-weight, regular);
+      font-size: 80px;
+      color: #ffffff;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-weight: map-get($font-weight, thin);
+      font-size: 15px;
+      color: #ffffff;
+    }
+
+    .btn-warning {
+      background-color: #f2b90c;
+      border: none;
+      font-family: "Krona One", sans-serif;
+      font-weight: map-get($font-weight, regular);
+      font-size: 15px;
+      border-radius: 30px;
+    }
+  }
+
+  .doing {
+    img {
+      width: 500px;
+      height: 300px;
+    }
+  }
+}

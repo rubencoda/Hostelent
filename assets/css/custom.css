@@ -1,0 +1,74 @@
+.img-media {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.identitas {
+  margin-top: 25px;
+}
+
+.nama-media {
+  font-size: 20px;
+}
+
+.umur-media {
+  margin-top: -5px;
+  font-size: 15px;
+}
+
+.btn-media {
+  margin-top: 25px;
+  max-height: 50px;
+}
+
+.deskripsi-order {
+  margin-top: 30px;
+}
+
+/* Choose Order */
+.img-internship {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.text-internship {
+  text-decoration: none;
+  font-size: 20px;
+  color: #373737;
+}
+
+/* Modal Profile Pekerja */
+.img-modal {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.nama-media-modal {
+  margin-top: 10px;
+}
+
+.umur-media-modal {
+  margin-top: -10px;
+}
+.alamat-media-modal {
+  margin-top: -5px;
+}
+
+/* Customize Alert */
+.swal2-styled.swal2-confirm {
+  background-color: #009688 !important;
+}
+
+@media (min-width: 992px) {
+  .img-media {
+    margin-right: 30px;
+  }
+
+  .btn-media {
+    margin-top: 5px;
+  }
+}

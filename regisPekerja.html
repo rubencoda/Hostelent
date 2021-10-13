@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png" />
+    <!-- Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style/css/all.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Registrasi Talent</title>
+  </head>
+  <body class="d-flex flex-column h-100" style="background-color: #2b7b8c">
+    <!-- Start Navbar -->
+    <nav class="bg-transparent navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand navbar-login" href="index"
+          ><img src="assets/img/logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="loginpengusaha"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Content -->
+    <section class="form">
+      <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-8">
+            <div class="card regis-form">
+              <h1 class="card-title text-center" id="topform">
+                Registrasi Akun Talent
+              </h1>
+              <p class="text-center">
+                Sudah punya akun?
+                <a href="loginPekerja">Login sekarang!</a>
+              </p>
+              <div class="card-text">
+                <form action="" name="Formulir">
+                  <!-- Start Progress Bar -->
+                  <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div
+                      class="progress-step progress-step-active"
+                      data-title="pribadi"
+                    ></div>
+                    <div class="progress-step" data-title="berkas"></div>
+                    <div class="progress-step" data-title="pekerjaan"></div>
+                    <div class="progress-step" data-title="training"></div>
+                    <div class="progress-step" data-title="kesehatan"></div>
+                  </div>
+                  <!-- End Progress Bar -->
+
+                  <!-- Start Data Pribadi -->
+                  <div class="form-step form-step-active">
+                    <h4 class="pb-3 pt-3">Data Pribadi</h4>
+                    <div class="form-group pt-2 pb-2">
+                      <img id="output" />
+                      <label for="FotoPekerja">Foto Talent</label>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onchange="loadFile(event)"
+                        class="mb-3 mt-3"
+                        name="FotoTalent"
+                      />
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="NamaPekerja">Nama Lengkap</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan Nama Lengkap"
+                        name="NamaTalent"
+                      />
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="NIKPekerja">NIK</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan NIK"
+                        name="nikTalent"
+                      />
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="JenisKelamin">Jenis Kelamin</label><br />
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="KelaminPria"
+                        />
+                        <label class="form-check-label" for="KelaminPria">
+                          Pria
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="KelaminWanita"
+                        />
+                        <label class="form-check-label" for="KelaminWanita">
+                          Wanita
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for="Kota Kelahiran">Kota Kelahiran</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Masukkan NIK"
+                            name="KotaKelahiran"
+                          />
+                        </div>
+                        <div class="col-sm-6">
+                          <label for="ttl">Tanggal Lahir</label>
+                          <input
+                            class="form-control"
+                            type="date"
+                            id="DOB"
+                            name="tanggallahir"
+                            placeholder="Masukkan Kota Lahir"
+                          />
+                          <a
+                            class="btn btn-primary mt-3"
+                            onclick="ageCalculator()"
+                          >
+                            Hitung Umur
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <h5 style="color: 32a80f" id="result"></h5>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="AlamatKTP">Alamat KTP</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan Alamat KTP"
+                        name="AlamatKTPTalent"
+                      />
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="AlamatDomisili">Alamat Domisili</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan Alamat Domisili"
+                        name="AlamatDomisiliTalent"
+                      />
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="NoTelpon">No Telpon / Whatsapp</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan Alamat Domisili"
+                        name="nomorTalent"
+                      />
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div class="col-md-3 mb-2">
+                        <a
+                          href="#topform"
+                          class="btn btn-warning next"
+                          style="width: 100%"
+                        >
+                          Next
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Data Pribadi -->
+
+                  <!-- Start Lampiran Berkas -->
+                  <div class="form-step">
+                    <h4 class="pb-3" id="berkas">Lampiran Berkas</h4>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="KTP">KTP/SIM</label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="KTP"
+                          name="ktpTalent"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="KartuKeluarga">Kartu Keluarga</label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="KartuKeluarga"
+                          name="KartuKeluarga"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="skckTalent">SKCK</label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="skckTalent"
+                          name="skckTalent"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="ijasahTalent">Ijasah/Sertifikat</label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="ijasahTalent"
+                          name="ijasahTalent"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <label for="spKerja">Surat Pengalaman Kerja</label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="spKerja"
+                          name="spKerja"
+                        />
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div href="#topform" class="col-md-3 mb-2">
+                        <a
+                          href="#topform"
+                          class="btn btn-warning next"
+                          style="width: 100%"
+                        >
+                          Next
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <a
+                          href="#topform"
+                          class="btn btn-secondary back"
+                          style="width: 100%"
+                        >
+                          Back
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Lampiran Berkas -->
+
+                  <!-- Start Jenis Pekerjaan -->
+                  <div class="form-step">
+                    <h4 class="pb-3">Jenis Pekerjaan</h4>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-3 pt-0"
+                          >Housekeeping</label
+                        >
+                        <div class="col-sm-9">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="roomattendant"
+                              value="roomattendant"
+                            />
+                            <label class="form-check-label" for="roomattendant">
+                              Room attendant
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="publicareaattendant"
+                              value="publicareaattendant"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="publicareaattendant"
+                            >
+                              Public area attendant
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="laundry"
+                              value="laundry"
+                            />
+                            <label class="form-check-label" for="laundry">
+                              Laundry
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-3 pt-0"
+                          >Food and beverage Service</label
+                        >
+                        <div class="col-sm-9">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="waiter"
+                              value="waiter"
+                            />
+                            <label class="form-check-label" for="waiter">
+                              Waiter
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="Banquet"
+                              value="Banquet"
+                            />
+                            <label class="form-check-label" for="Banquet">
+                              Banquet
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="RestaurantHelper"
+                              value="RestaurantHelper"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="RestaurantHelper"
+                            >
+                              Restaurant Helper
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-3 pt-0"
+                          >Food and beverage Product</label
+                        >
+                        <div class="col-sm-9">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="CookHelper"
+                              value="CookHelper"
+                            />
+                            <label class="form-check-label" for="CookHelper">
+                              Cook Helper
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="Stewarding"
+                              value="Stewarding"
+                            />
+                            <label class="form-check-label" for="Stewarding">
+                              Stewarding
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div class="col-md-3 mb-2">
+                        <a
+                          href="#topform"
+                          class="btn btn-warning next"
+                          style="width: 100%"
+                        >
+                          Next
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <a
+                          href="#topform"
+                          class="btn btn-secondary back"
+                          style="width: 100%"
+                        >
+                          Back
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Jenis Pekerjaan -->
+
+                  <!-- Start Pengalaman Training -->
+                  <div class="form-step">
+                    <h4 class="pb-3">Pengalaman Kerja</h4>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-2 pt-0"
+                          >Hotel</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Hotel
+                            </a>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Hotel
+                            </a>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Hotel
+                            </a>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-2 pt-0"
+                          >Restaurant</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Restaurant
+                            </a>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Restaurant
+                            </a>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="#"
+                              value="#"
+                            />
+                            <a href="#" class="form-check-label" for="#">
+                              Link Website Restaurant
+                            </a>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-2 pt-0"
+                          >Kapal Pesiar</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="HollandAmericanline"
+                              value="HollandAmericanline"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="HollandAmericanline"
+                            >
+                              Holland American line
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="Cruiseline"
+                              value="Cruiseline"
+                            />
+                            <label class="form-check-label" for="Cruiseline">
+                              Cruise line
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div class="col-md-3 mb-2">
+                        <a
+                          href="#topform"
+                          class="btn btn-warning next"
+                          style="width: 100%"
+                        >
+                          Next
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <a
+                          href="#topform"
+                          class="btn btn-secondary back"
+                          style="width: 100%"
+                        >
+                          Back
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Pengalaman Training -->
+
+                  <!-- Start Riwayat Kesehatan -->
+                  <div class="form-step">
+                    <h4 class="pb-3">Riawayat Kesehatan</h4>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-6 pt-0"
+                          >Sudah mendapatkan vaksin covid-19 ?</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="vaksin"
+                              id="sudah"
+                              value="sudah"
+                            />
+                            <label class="form-check-label" for="sudah">
+                              Sudah
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="vaksin"
+                              id="belum"
+                              value="belum"
+                            />
+                            <label
+                              class="form-check-label text-danger"
+                              for="belum"
+                            >
+                              Belum
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-6 pt-0"
+                          >Dalam 3 Bulan ini pernah terjangkit ?</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="terjangkit"
+                              id="ya"
+                              value="ya"
+                            />
+                            <label
+                              class="form-check-label text-danger"
+                              for="ya"
+                            >
+                              Ya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="terjangkit"
+                              id="tidak"
+                              value="tidak"
+                            />
+                            <label class="form-check-label" for="tidak">
+                              Tidak
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-6 pt-0"
+                          >Menderita penyakit yang memungkinkan tidak bisa
+                          bekerja berat terus menerus (asma / epilepsi / jantung
+                          ) ?</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="penyakit1"
+                              id="ya"
+                              value="ya"
+                            />
+                            <label
+                              class="form-check-label text-danger"
+                              for="ya"
+                            >
+                              Ya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="penyakit1"
+                              id="tidak"
+                              value="tidak"
+                            />
+                            <label class="form-check-label" for="tidak">
+                              Tidak
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="form-group pt-2 pb-2">
+                      <fieldset class="row">
+                        <label
+                          for="spKerja"
+                          class="col-form-label col-sm-6 pt-0"
+                          >Pernah Dalam perawatan pengobatan Psikotropika
+                          ?</label
+                        >
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="penyakit2"
+                              id="ya"
+                              value="ya"
+                            />
+                            <label
+                              class="form-check-label text-danger"
+                              for="ya"
+                            >
+                              Ya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="penyakit2"
+                              id="tidak"
+                              value="tidak"
+                            />
+                            <label class="form-check-label" for="tidak">
+                              Tidak
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div class="col-md-3 mb-2">
+                        <button
+                          type="submit"
+                          class="btn btn-warning"
+                          style="width: 100%"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                      <div class="col-md-3">
+                        <a
+                          href="#topform"
+                          class="btn btn-secondary back"
+                          style="width: 100%"
+                        >
+                          Back
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Riwayat Kesehatan -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footerchoose">
+          <p class="text-center mt-3 mb-3" style="font-size: 13px">
+            © 2021 Hostelent Indonesia
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Slick Carousel -->
+    <script src="slick/slick.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script/scripts.js"></script>
+
+    <!-- Form Input Gambar -->
+    <script>
+      var loadFile = function (event) {
+        var output = document.getElementById("output");
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+          URL.revokeObjectURL(output.src); // free memory
+        };
+      };
+    </script>
+
+    <!-- Hitung Umur -->
+    <script>
+      function ageCalculator() {
+        var userinput = document.getElementById("DOB").value;
+
+        var dob = new Date(userinput);
+
+        if (userinput == null || userinput == "") {
+          document.getElementById("message").innerHTML =
+            "**Choose a date please!";
+
+          return false;
+        } else {
+          //calculate month difference from current date in time
+
+          var month_diff = Date.now() - dob.getTime();
+
+          //convert the calculated difference in date format
+
+          var age_dt = new Date(month_diff);
+
+          //extract year from date
+
+          var year = age_dt.getUTCFullYear();
+
+          //now calculate the age of the user
+
+          var age = Math.abs(year - 1970);
+
+          //display the calculated age
+
+          return (document.getElementById("result").innerHTML =
+            "Umur Anda : " + age + " Tahun");
+        }
+      }
+    </script>
+    <!-- Progress Bar -->
+    <script src="script/progressbar.js"></script>
+  </body>
+</html>

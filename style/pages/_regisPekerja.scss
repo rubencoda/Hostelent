@@ -1,0 +1,86 @@
+.form {
+  input {
+    display: flex;
+  }
+  // ProgressBar
+  .progressbar {
+    margin: 35px 0 35px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+  }
+
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+  }
+
+  .progress {
+    background-color: #f2b90c;
+    width: 0%;
+    transition: 0.3s;
+  }
+
+  .progress-step {
+    width: 20px;
+    height: 20px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .progress-step::before {
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, regular);
+    counter-increment: step;
+    content: counter(step);
+  }
+
+  .progress-step-active {
+    background-color: #f2b90c;
+    color: #ffff;
+  }
+
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+
+  .form-step-active {
+    display: block;
+  }
+
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: map-get($font-weight, semibold);
+    color: #373737;
+  }
+
+  #output {
+    width: 150px;
+    height: 150px;
+  }
+}
