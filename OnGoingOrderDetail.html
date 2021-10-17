@@ -219,7 +219,7 @@
                   <li>
                     <a class="active" href="OnGoingOrder"> Ongoing Order </a>
                   </li>
-                  <li><a href="add-booking"> Order History </a></li>
+                  <li><a href="OrderHistoryPengusaha"> Order History </a></li>
                 </ul>
               </li>
             </ul>
@@ -231,7 +231,61 @@
           <div class="page-header mt-5">
             <div class="row mb-4">
               <div class="col">
-                <h3 class="page-title">On Going Order Detail</h3>
+                <h3 class="page-title">Detail Order</h3>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Start Detail Order -->
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-9 d-flex">
+                        <img
+                          class="img-media"
+                          src="assets/img/video-call.jpg"
+                          alt=""
+                        />
+                        <div class="identitas">
+                          <h3 class="nama-media">Nama Pengusaha</h3>
+                          <p class="umur-media">Alamat Usaha</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-sm-10">
+                        <p class="umur-media">
+                          Jenis Pekerjaan : Laundry, Pegawai dibutuhkan : 1
+                          orang, Tinggi Badan : 165 cm, Jenis Kelamin : Pria,
+                          Gaji Perhari : Rp 100000, Fasilitas Makan : Ya, Alamat
+                          Usaha : Wage
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-9"></div>
+                      <div class="col-sm-3">
+                        <button
+                          onclick="mulai()"
+                          style="width: 100%"
+                          class="btn btn-primary btn-media"
+                        >
+                          Mulai Pekerjaan
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Detail Order -->
+            </div>
+          </div>
+        </div>
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row mb-4">
+              <div class="col">
+                <h3 class="page-title">List Pekerja</h3>
               </div>
             </div>
             <div class="row justify-content-center align-items-center">
@@ -259,70 +313,14 @@
                         >
                           Accept
                         </button>
-                        <button
+                        <a
+                          href="profileTalentPublic.html"
                           type="button"
                           class="btn btn-warning btn-media"
-                          data-toggle="modal"
-                          href="#exampleModal"
                         >
                           Detail
-                        </button>
+                        </a>
                       </div>
-                      <!-- Start Modal Profile -->
-                      <div
-                        class="modal fade"
-                        id="exampleModal"
-                        aria-hidden="true"
-                        role="dialog"
-                      >
-                        <div
-                          class="modal-dialog modal-dialog-centered"
-                          role="document"
-                        >
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">Profile Detail</h5>
-                              <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                              >
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="row">
-                                <div class="col-sm-12 text-center">
-                                  <img
-                                    class="img-modal"
-                                    src="assets/img/video-call.jpg"
-                                    alt=""
-                                  />
-                                  <h3 class="nama-media-modal">Jennie Clay</h3>
-                                  <p class="umur-media-modal">19 Tahun</p>
-                                  <p class="alamat-media-modal">
-                                    Alamat Pekerja
-                                  </p>
-                                </div>
-                              </div>
-                              <hr class="my-4" />
-                              <div class="row">
-                                <div class="col-sm-12">
-                                  <h5>Pengalaman Kerja</h5>
-                                </div>
-                              </div>
-                              <hr class="my-4" />
-                              <div class="row">
-                                <div class="col-sm-12">
-                                  <h5>Riwayat Penyakit</h5>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- End Modal Profile -->
                     </div>
                   </div>
                 </div>

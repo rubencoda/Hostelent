@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
-    <title>My Profile</title>
+    <title>Profile Pengusaha Public</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
@@ -28,11 +28,11 @@
     <div class="main-wrapper">
       <div class="header">
         <div class="header-left">
-          <a href="IndexPengusaha" class="logo">
+          <a href="indexTalent" class="logo">
             <img src="assets/img/icon.png" width="50" height="70" alt="logo" />
             <span class="logoclass">HOSTELENT</span>
           </a>
-          <a href="IndexPengusaha" class="logo logo-small">
+          <a href="indexTalent" class="logo logo-small">
             <img src="assets/img/icon.png" alt="Logo" width="30" height="30" />
           </a>
         </div>
@@ -174,11 +174,11 @@
                 </div>
                 <div class="user-text">
                   <h6>Soeng Souy</h6>
-                  <p class="text-muted mb-0">Pengusaha</p>
+                  <p class="text-muted mb-0">Administrator</p>
                 </div>
               </div>
-              <a class="dropdown-item" href="profilePengusaha">My Profile</a>
-              <a class="dropdown-item" href="loginpengusaha">Logout</a>
+              <a class="dropdown-item" href="profileTalent">My Profile</a>
+              <a class="dropdown-item" href="loginPekerja">Logout</a>
             </div>
           </li>
         </ul>
@@ -195,8 +195,8 @@
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-              <li class="active">
-                <a href="IndexPengusaha"
+              <li>
+                <a href="indexTalent"
                   ><i class="fas fa-tachometer-alt"></i>
                   <span>Dashboard</span></a
                 >
@@ -209,13 +209,10 @@
                 ></a>
                 <ul class="submenu_class" style="display: none">
                   <li>
-                    <a href="AddOrderChoose"> Add Order </a>
+                    <a class="active" href="OrderListTalent"> Order List </a>
                   </li>
-                  <li>
-                    <a href="NeedApprovalPengusaha"> Need Approval </a>
-                  </li>
-                  <li><a href="OnGoingOrder"> Ongoing Order </a></li>
-                  <li><a href="OrderHistoryPengusaha"> Order History </a></li>
+                  <li><a href="OnGoingOrderTalent"> Ongoing Order </a></li>
+                  <li><a href="OrderHistoryTalent"> Order History </a></li>
                 </ul>
               </li>
             </ul>
@@ -326,11 +323,6 @@
                       <i class="fas fa-map-marker-alt"></i> Alamat Usaha
                     </div>
                   </div>
-                  <div class="col-auto profile-btn">
-                    <a href="edit-profile-pengusaha" class="btn btn-primary">
-                      Edit
-                    </a>
-                  </div>
                 </div>
               </div>
               <div class="profile-menu">
@@ -343,11 +335,6 @@
                       >About</a
                     >
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#password_tab"
-                      >Change Password</a
-                    >
-                  </li>
                 </ul>
               </div>
               <div class="tab-content profile-tab-cont">
@@ -358,12 +345,6 @@
                         <div class="card-body">
                           <h5 class="card-title d-flex justify-content-between">
                             <span>Penanggung Jawab </span>
-                            <a
-                              class="edit-link"
-                              data-toggle="modal"
-                              href="#edit_personal_details"
-                              ><i class="fa fa-edit mr-1"></i>Edit</a
-                            >
                           </h5>
                           <div class="row mt-5">
                             <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">
@@ -450,34 +431,6 @@
                               </form>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="password_tab" class="tab-pane fade">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Change Password</h5>
-                      <div class="row">
-                        <div class="col-md-10 col-lg-6">
-                          <form>
-                            <div class="form-group">
-                              <label>Old Password</label>
-                              <input type="password" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                              <label>New Password</label>
-                              <input type="password" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                              <label>Confirm Password</label>
-                              <input type="password" class="form-control" />
-                            </div>
-                            <button class="btn btn-primary" type="submit">
-                              Save Changes
-                            </button>
-                          </form>
                         </div>
                       </div>
                     </div>

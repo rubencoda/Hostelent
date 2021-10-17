@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
-    <title>On Going Order</title>
+    <title>Order History</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link
@@ -195,7 +195,7 @@
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-              <li class="">
+              <li>
                 <a href="IndexPengusaha"
                   ><i class="fas fa-tachometer-alt"></i>
                   <span>Dashboard</span></a
@@ -214,10 +214,12 @@
                   <li>
                     <a href="NeedApprovalPengusaha"> Need Approval </a>
                   </li>
+                  <li><a href="OnGoingOrder"> Ongoing Order </a></li>
                   <li>
-                    <a class="active" href="OnGoingOrder"> Ongoing Order </a>
+                    <a class="active" href="OrderHistoryPengusaha">
+                      Order History
+                    </a>
                   </li>
-                  <li><a href="OrderHistoryPengusaha"> Order History </a></li>
                 </ul>
               </li>
             </ul>
@@ -229,7 +231,7 @@
           <div class="page-header mt-5">
             <div class="row">
               <div class="col">
-                <h3 class="page-title">On Going Order</h3>
+                <h3 class="page-title">Order History</h3>
               </div>
             </div>
           </div>
@@ -243,22 +245,18 @@
                         <tr>
                           <th>ID</th>
                           <th>Jenis Pekerjaan</th>
-                          <th>Lama Periode</th>
-                          <th>Banyak Pekerja</th>
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
+                          <td>6</td>
                           <td>Room Attendant</td>
-                          <td>Lama Periode</td>
-                          <td>1</td>
-                          <td>Mencari Pekerja</td>
+                          <td>Finish</td>
                           <td>
                             <a
-                              href="OnGoingOrderDetail"
+                              href="#"
                               type="button"
                               class="btn btn-warning btn-sm mb-1"
                             >

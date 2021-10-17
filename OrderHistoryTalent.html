@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
-    <title>On Going Order</title>
+    <title>Order History</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link
@@ -28,11 +28,11 @@
     <div class="main-wrapper">
       <div class="header">
         <div class="header-left">
-          <a href="IndexPengusaha" class="logo">
+          <a href="indexTalent" class="logo">
             <img src="assets/img/icon.png" width="50" height="70" alt="logo" />
             <span class="logoclass">HOSTELENT</span>
           </a>
-          <a href="IndexPengusaha" class="logo logo-small">
+          <a href="indexTalent" class="logo logo-small">
             <img src="assets/img/icon.png" alt="Logo" width="30" height="30" />
           </a>
         </div>
@@ -177,8 +177,8 @@
                   <p class="text-muted mb-0">Pengusaha</p>
                 </div>
               </div>
-              <a class="dropdown-item" href="profilePengusaha">My Profile</a>
-              <a class="dropdown-item" href="loginpengusaha">Logout</a>
+              <a class="dropdown-item" href="profileTalent">My Profile</a>
+              <a class="dropdown-item" href="loginPekerja">Logout</a>
             </div>
           </li>
         </ul>
@@ -195,8 +195,8 @@
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-              <li class="">
-                <a href="IndexPengusaha"
+              <li>
+                <a href="indexTalent"
                   ><i class="fas fa-tachometer-alt"></i>
                   <span>Dashboard</span></a
                 >
@@ -209,15 +209,16 @@
                 ></a>
                 <ul class="submenu_class" style="display: none">
                   <li>
-                    <a href="AddOrderChoose"> Add Order </a>
+                    <a href="OrderListTalent"> Order List </a>
                   </li>
                   <li>
-                    <a href="NeedApprovalPengusaha"> Need Approval </a>
+                    <a href="OnGoingOrderTalent"> Ongoing Order </a>
                   </li>
                   <li>
-                    <a class="active" href="OnGoingOrder"> Ongoing Order </a>
+                    <a class="active" href="OrderHistoryTalent">
+                      Order History
+                    </a>
                   </li>
-                  <li><a href="OrderHistoryPengusaha"> Order History </a></li>
                 </ul>
               </li>
             </ul>
@@ -229,7 +230,7 @@
           <div class="page-header mt-5">
             <div class="row">
               <div class="col">
-                <h3 class="page-title">On Going Order</h3>
+                <h3 class="page-title">Order History</h3>
               </div>
             </div>
           </div>
@@ -241,24 +242,20 @@
                     <table class="datatable table table-stripped">
                       <thead>
                         <tr>
-                          <th>ID</th>
                           <th>Jenis Pekerjaan</th>
-                          <th>Lama Periode</th>
-                          <th>Banyak Pekerja</th>
                           <th>Status</th>
+                          <th>Pemberi Pekerja</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
                           <td>Room Attendant</td>
-                          <td>Lama Periode</td>
-                          <td>1</td>
-                          <td>Mencari Pekerja</td>
+                          <td>Paid</td>
+                          <td>Nama Usaha</td>
                           <td>
                             <a
-                              href="OnGoingOrderDetail"
+                              href="#"
                               type="button"
                               class="btn btn-warning btn-sm mb-1"
                             >

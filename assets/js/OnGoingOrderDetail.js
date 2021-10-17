@@ -19,19 +19,19 @@ function Apply() {
   });
 }
 
-function Reject() {
+function mulai() {
   Swal.fire({
-    title: "Apakah ada yakin menolak?",
+    title: "Apakah ingin memulai pekerjaan?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#009688",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Reject",
+    confirmButtonText: "Mulai",
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
-        icon: "error",
-        title: "Rejected",
+        icon: "success",
+        title: "Pekerjaan Dimulai",
         confirmButtonText: "Selesai",
         confirmButtonColor: "#009688",
       });
