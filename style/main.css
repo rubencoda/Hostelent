@@ -14,7 +14,7 @@
   padding-left: 25px;
 }
 
-.navbar-nav .nav-item .btn-warning {
+#navbarNav .btn-warning {
   background-color: #2b7b8c;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -24,7 +24,7 @@
   color: #ffff;
 }
 
-.navbar-nav a:hover {
+#navbarNav .btn-warning:hover {
   color: #f2b90c !important;
 }
 
@@ -57,7 +57,7 @@
 .banner p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 24px;
   color: #ffffff;
 }
 
@@ -71,6 +71,10 @@
   border-radius: 30px;
 }
 
+.banner .btn-warning:hover {
+  background-color: #f2b90caa;
+}
+
 .wrapper {
   background-color: #2b7b8c;
 }
@@ -82,15 +86,19 @@
 .doing img {
   width: 300px;
   height: 200px;
-  border-radius: 30px;
 }
 
 .doing h3 {
   margin-top: 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 60px;
   color: #ffff;
+}
+
+.doing .hastag {
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .doing p {
@@ -124,7 +132,7 @@
 }
 
 .blognews .blog-slider .card img {
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .blognews .blog-slider .card .btn-primary {
@@ -208,7 +216,7 @@
   padding: 10px;
   margin: 50px 15px 5px 15px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .testimonial .testi-card img {
@@ -266,30 +274,39 @@
   font-size: 15px;
 }
 
-.footer {
-  background-color: #373737;
+footer {
+  background: #373737;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
-.footer h1 {
-  margin: 50px 0 30px 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: #ffff;
+footer .kontak {
+  padding-top: 40px;
 }
 
-.footer h4 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #ffff;
+@media (max-width: 768px) {
+  footer .kontak {
+    padding-top: 0;
+  }
 }
 
-.footer p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  color: #ffff;
+footer .kontak a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer .kontak a:hover {
+  color: #ffffffaa;
+}
+
+footer .nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer .nav-item a:hover {
+  color: #ffffffaa;
 }
 
 @media (min-width: 992px) {
@@ -297,7 +314,7 @@
     margin-top: 190px;
     font-family: "Krona One", sans-serif;
     font-weight: 500;
-    font-size: 80px;
+    font-size: 50px;
     color: #ffffff;
   }
   .banner p {
@@ -316,7 +333,7 @@
   }
   .doing img {
     width: 500px;
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -361,7 +378,7 @@
 
 .choosebanner .pengusaha:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .choosebanner .footerchoose {
@@ -452,7 +469,7 @@
 .login-form .form-control:focus {
   border-color: #f2b90c;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .login-form .btn-warning {
@@ -501,7 +518,7 @@
 .regis-form .form-control:focus {
   border-color: #f2b90c;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .regis-form .form-check-input:checked {
@@ -540,8 +557,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   counter-reset: step;
 }
 
@@ -551,7 +568,7 @@
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 4px;
   width: 100%;
   background-color: #dcdcdc;
@@ -573,11 +590,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 1;
 }
 
@@ -597,20 +614,20 @@
 .form .form-step {
   display: none;
   -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   -webkit-animation: animate 0.5s;
-          animation: animate 0.5s;
+  animation: animate 0.5s;
 }
 
 @-webkit-keyframes animate {
   from {
     -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
+    transform: scale(1, 0);
     opacity: 0;
   }
   to {
     -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
     opacity: 1;
   }
 }
@@ -618,12 +635,12 @@
 @keyframes animate {
   from {
     -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
+    transform: scale(1, 0);
     opacity: 0;
   }
   to {
     -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
     opacity: 1;
   }
 }
