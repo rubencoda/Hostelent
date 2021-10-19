@@ -75,6 +75,45 @@
   background-color: #f2b90caa;
 }
 
+.banner-tk {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), url("../assets/img/banner-tk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner-tk h1 {
+  margin: 180px 0 180px 0;
+  font-weight: 700;
+}
+
+.banner-tk h1 span {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.perkenalan {
+  font-family: "Poppins", sans-serif;
+}
+
+.berkembang {
+  background: #2b7b8c;
+  font-family: "Poppins", sans-serif;
+}
+
+.berkembang .row img {
+  margin: 15px 15px 15px 0;
+  border-radius: 25px;
+}
+
+.berkembang .row h2 {
+  font-size: 46px;
+}
+
 .wrapper {
   background-color: #2b7b8c;
 }
