@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap");
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  background: #2b7b8c;
+}
+::-webkit-scrollbar-thumb {
+  width: 1em;
+  background-color: #f2b90c;
+  outline: 1px solid #373737;
+  border-radius: 1rem;
+}
+
 .navbar-brand {
   font-family: "Krona One", sans-serif;
   font-weight: 500;
@@ -94,6 +109,37 @@
   font-style: italic;
   font-weight: lighter;
   font-size: 25px;
+}
+
+.hubungiKami {
+  font-family: "Poppins", sans-serif;
+}
+
+.hubungiKami .nav .nav-link {
+  color: #373737;
+  font-weight: 500;
+}
+.hubungiKami .nav .nav-link:hover {
+  color: #373737aa;
+}
+.hubungiKami form input,
+.hubungiKami form textarea {
+  border-radius: 10px;
+  border: 1px solid #2b7b8c;
+}
+.hubungiKami form input:focus,
+.hubungiKami form textarea:focus {
+  box-shadow: none;
+}
+.hubungiKami form .btn-submit {
+  background: #2b7b8c;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.hubungiKami form .btn-submit:hover {
+  background: #2b7a8cee;
+  color: #f2b90c;
 }
 
 .perkenalan {
